@@ -49,5 +49,4 @@ let time = Number(key[1].split("-")[1])
 const timeleft = new Date(time)
 console.log(timeleft)
 let checktime = timeleft - Date.now() >= timeleft || timeleft - Date.now() <= 0
->>>>>>> 1f2b141 (cak)
 console.log(checktime)

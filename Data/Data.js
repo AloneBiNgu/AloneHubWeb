@@ -31,7 +31,6 @@ const WhiteListSchema = new mongoose.Schema({
 	}
 })
 
-=======
 const mongoose = require('mongoose');
 
 const WhiteListSchema = new mongoose.Schema({
@@ -65,5 +64,4 @@ const WhiteListSchema = new mongoose.Schema({
 	}
 })
 
->>>>>>> 1f2b141 (cak)
 module.exports = mongoose.model("DataUser", WhiteListSchema)
