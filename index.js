@@ -268,7 +268,7 @@ app.post("/getkey", async(req, res, next) => {
 	})
 })
 
-let port = 3000 || process.env.PORT
+let port = 5000 || process.env.PORT
 
 app.listen(port, () => {
 	console.log("[HOST] Ready")
