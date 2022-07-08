@@ -255,7 +255,7 @@ app.post("/getkey", async(req, res, next) => {
 	if (!dataU) {
 		return
 	}
-	verify("0x0000000000000000000000000000000000000000", token)
+	verify("0xC5ebe8A82aa11EB1C1056D013726749d67ee3afc", token)
 	.then((data) => {
 		if (data.success == true) {
 			return res.json({UrlSolved: dataU.UrlSolved})
