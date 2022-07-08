@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function GenerateToken(message) {
   	const utf8encoder = new TextEncoder();
   	const rb = utf8encoder.encode(message);
