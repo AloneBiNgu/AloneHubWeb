@@ -239,10 +239,10 @@ app.get("/validate", async(req, res) => {
 	return res.send(JSON.stringify({message: reToken, status: 200}))
 })
 
-app.get("/delete", async(req, res) => {
-	await Data.deleteMany({})
-	return res.redirect("/")
-})
+// app.get("/delete", async(req, res) => {
+// 	await Data.deleteMany({})
+// 	return res.redirect("/")
+// })
 
 app.post("/getkey", async(req, res, next) => {
 	let token = req.body["h-captcha-response"];
