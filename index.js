@@ -268,9 +268,9 @@ app.post("/getkey", async(req, res, next) => {
 	})
 })
 
-let port = 5000 || process.env.PORT
+const PORT = process.env.PORT || 3000
 
-app.listen(port, () => {
+app.listen(PORT, () => {
 	console.log("[HOST] Ready")
 	if(!mongoose.connections[0].client) {
         mongoose.connect(db, {
