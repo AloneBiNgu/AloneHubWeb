@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
     <head>
@@ -38,7 +37,6 @@
         </div>
     </nav>
     <script>
-        console.log(window.parent.location)
         async function onSubmit() {
             let formData = document.getElementById("Checkpoint")
             let newForm = new FormData(formData)
@@ -67,74 +65,4 @@
             </div>
         </form>
     </div>
-=======
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Home</title>
-        <link href="/assets/img/AloneHub.jpg" rel="icon" type="image/x-icon">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
-        <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
-    </head>
-    <!-- Home page -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <body style="background-color: rgb(35, 31, 31);">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a href="/" class="navbar-brand">
-                <!-- <img src="/assets/img/AloneHub1.png" alt="" width="60" height="60"> -->
-                <b>Alone Hub</b>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/discord">Discord</a>
-                </li>
-              </ul>
-            </div>
-        </div>
-    </nav>
-    <script>
-        console.log(window.parent.location)
-        async function onSubmit() {
-            let formData = document.getElementById("Checkpoint")
-            let newForm = new FormData(formData)
-            newForm.delete('g-recaptcha-response');
-            newForm.append("ip", "<%=ip%>")
-            let payload = new URLSearchParams(newForm)
-            fetch("/getkey", {
-                method: "POST",
-                body: payload,
-                mode: 'no-cors'
-            }).then(async(re) => {
-                const data = await re.json()
-                if (data.UrlSolved) {
-                    return window.location.replace(`/redirect?url=${data.UrlSolved}`)
-                }
-            })
-        }
-    </script>
-    <div class="position-absolute top-50 start-50 translate-middle ms-auto">
-        <form id="Checkpoint" onsubmit="onSubmit(); return false;">
-            <h4 class="text-center text-white mb-3">Checkpoint <%=checkpoint%></h4>
-            <div class="h-captcha" data-sitekey="<%=token%>"> 
-            </div>
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <button type="submit" class="btn btn-success text-center text-white">Continue</button>
-            </div>
-        </form>
-    </div>
->>>>>>> 1f2b141 (cak)
 </html>
